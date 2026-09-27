@@ -1,0 +1,25 @@
+{
+  "name": "@shopping-eagle/web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "lint": "eslint . --max-warnings=0"
+  },
+  "dependencies": {
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "nuxt": "^4.2.0",
+    "tailwindcss": "^3.4.17",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.1",
+    "@types/node": "^22.15.3",
+    "eslint": "^9.25.1",
+    "eslint-plugin-vue": "^10.1.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.31.0",
+    "vue-tsc": "^2.2.10"
+  }
+}

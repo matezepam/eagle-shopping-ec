@@ -1,0 +1,5 @@
+<script setup lang="ts">
+import type { Product } from '~/types/catalog'
+defineProps<{ product: Product }>()
+</script>
+<template><NuxtLink :to="`/product/${product.slug}`" class="card group block"><div class="aspect-[4/5] overflow-hidden bg-slate-200"><img v-if="product.images[0]" :src="product.images[0].url" :alt="product.images[0].alt" class="h-full w-full object-cover transition duration-500 group-hover:scale-105"><div v-else class="flex h-full items-center justify-center text-xs font-semibold uppercase tracking-widest text-slate-400">Image coming soon</div></div><div class="p-4"><div class="mb-2 flex justify-between gap-4"><h3 class="font-semibold">{{ product.name }}</h3><span class="text-sm">{{ useMoney(product.price * (1 - product.discountPercentage / 100)) }}</span></div><p class="text-sm text-slate-600">{{ product.category.name }} · {{ product.technique.name }}</p><p v-if="product.discountPercentage" class="mt-2 text-xs font-bold text-rose-700">{{ product.discountPercentage }}% off</p></div></NuxtLink></template>

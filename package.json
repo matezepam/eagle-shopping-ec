@@ -1,0 +1,23 @@
+{
+  "name": "shopping-eagle",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=@shopping-eagle/web",
+    "dev:api": "npm run dev --workspace=@shopping-eagle/api",
+    "build": "npm run build --workspaces",
+    "lint": "npm run lint --workspaces",
+    "test": "npm run test --workspace=@shopping-eagle/api",
+    "db:generate": "npm run prisma:generate --workspace=@shopping-eagle/api",
+    "db:migrate": "npm run prisma:migrate --workspace=@shopping-eagle/api",
+    "db:seed": "npm run prisma:seed --workspace=@shopping-eagle/api",
+    "podman:build": "podman build -t localhost/shopping-eagle-web:latest -f Containerfile .",
+    "podman:run": "podman run --rm -p 3000:3000 localhost/shopping-eagle-web:latest"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  }
+}

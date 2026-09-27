@@ -1,0 +1,9 @@
+export type Category = { id: string; name: string; slug: string }
+export type Technique = Category
+export type Size = { id: string; name: string; sortOrder: number }
+export type Color = { id: string; name: string; hex: string }
+export type ProductImage = { id: string; productId: string; url: string; alt: string; position: number }
+export type ProductVariant = { id: string; sku: string; stock: number; active: boolean; size: Size; color: Color; updatedAt: string; product?: Product }
+export type Product = { id: string; name: string; slug: string; description: string; story: string; price: number; discountPercentage: number; published: boolean; returnable: boolean; category: Category; technique: Technique; images: ProductImage[]; variants: ProductVariant[]; createdAt: string; updatedAt: string }
+export type User = { id: string; email: string; role: 'CLIENT' | 'MODERATOR'; createdAt: string }
+export type ProductFilter = { categorySlug?: string; techniqueSlug?: string; minPrice?: number; maxPrice?: number; sizeId?: string; colorId?: string; inStock?: boolean; sort?: 'PRICE_ASC' | 'PRICE_DESC' | 'NEWEST' }

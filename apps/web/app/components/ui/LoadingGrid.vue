@@ -1,0 +1,1 @@
+<template><div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4"><div v-for="item in 8" :key="item" class="animate-pulse"><div class="aspect-[4/5] rounded-2xl bg-slate-200"></div><div class="mt-3 h-4 w-3/4 rounded bg-slate-200"></div><div class="mt-2 h-3 w-1/2 rounded bg-slate-200"></div></div></div></template>

@@ -1,0 +1,1 @@
+<template><footer class="mt-16 bg-ink py-10 text-slate-200"><div class="shell flex flex-col justify-between gap-5 text-sm sm:flex-row"><p class="font-display text-lg text-white">Shopping Eagle</p><p>Made with craft. Built for everyday stories.</p><p>© {{ new Date().getFullYear() }} Shopping Eagle</p></div></footer></template>

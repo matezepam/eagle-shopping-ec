@@ -1,0 +1,8 @@
+node_modules
+.nuxt
+.output
+.git
+.env
+apps/*/node_modules
+apps/*/.nuxt
+apps/*/.output
